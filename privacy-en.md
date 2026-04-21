@@ -34,6 +34,7 @@ ToBeVPN ("we", "the app") is a VPN service for Android devices. This policy desc
 | OS version, device model, app version | HTTP headers when requesting subscription | VPN panel |
 | Inbound and outbound traffic in bytes | Plan quota calculation | Bot backend and VPN panel |
 | Connection IP address | Briefly — for VPN technical operation | VPN panel and VPN nodes |
+| QR code image (mobile app only, on user request) | Linking a TV device via Google Code Scanner | On the device only, not sent to our servers |
 
 ## 3. What we do NOT collect
 
@@ -44,6 +45,30 @@ ToBeVPN ("we", "the app") is a VPN service for Android devices. This policy desc
 - Photos, files, media
 - Biometric data
 - Advertising identifiers
+
+## 3.1. Android permissions and their purpose
+
+| Permission | Purpose |
+| --- | --- |
+| `INTERNET`, `ACCESS_NETWORK_STATE` | Establishing the VPN tunnel and tracking network state |
+| `BIND_VPN_SERVICE` | Using the system `VpnService` API to build the VPN tunnel |
+| `FOREGROUND_SERVICE`, `FOREGROUND_SERVICE_SPECIAL_USE` | Keeping the VPN connection alive while the app is in the background |
+| `POST_NOTIFICATIONS` | Showing the VPN status indicator. Notifications are **not used** for marketing, advertising, or analytics. |
+
+The mobile version additionally uses the built-in **Google Code Scanner** module to link a TV device by scanning a QR code. The scanner runs locally; the app does not request `CAMERA` permission, and images are not stored or sent to our servers.
+
+The deep link `tobevpn://auth_callback` is used only to return to the app after a successful Telegram authentication.
+
+## 3.2. VPN service declaration
+
+In accordance with Google Play policies for apps that use the `VpnService` API, we declare:
+
+- VPN functionality is the **core, prominently advertised** feature of the app, not a side feature.
+- `VpnService` is used **solely** to build a VPN tunnel from your device to our VPN nodes.
+- We **do not modify** VPN traffic content, **do not inject** advertising, analytics, or trackers into it.
+- We **do not redirect** user traffic to third parties for commercial purposes.
+- We **do not use** `VpnService` as a library inside other apps.
+- The VPN protocols are open source (XRay/Sing-box). The connection configuration is built solely based on your subscription.
 
 ## 4. Sharing with third parties
 
@@ -76,12 +101,17 @@ Uninstalling the app clears local data but does not break the device→Telegram 
 ## 6. Security
 
 - All requests to our servers use HTTPS (TLS 1.2+).
-- The local database is encrypted.
+- The local database is encrypted (SQLCipher).
 - The server API uses token authentication.
+- In the event of an incident posing a risk to the rights and freedoms of data subjects, we will notify affected users and the competent supervisory authority within the timeframes required by applicable law (for GDPR — within 72 hours of becoming aware, Art. 33–34).
 
 ## 7. Children
 
-The service is not directed at children under 13. We do not knowingly collect data from minors. If you become aware that a child has provided personal data to us, please contact us and we will delete it.
+The service is not directed at:
+- persons under **16** if you are located in the European Economic Area or another jurisdiction where this is the minimum age of consent for personal data processing;
+- persons under **13** in other jurisdictions.
+
+We do not knowingly collect data from minors. If you become aware that a child has provided personal data to us, please contact us and we will delete it.
 
 ## 8. Your rights
 
@@ -94,6 +124,8 @@ You have the right to:
 - Object to processing
 
 To exercise these rights, email the address below. We will respond within 30 days.
+
+We **do not use** automated decision-making producing legal or similarly significant effects on the user, including profiling (Art. 22 GDPR).
 
 ## 9. EU/EEA users (GDPR)
 
