@@ -4,7 +4,7 @@ title: Privacy Policy — ToBeVPN
 
 # ToBeVPN Privacy Policy
 
-**Effective date:** April 21, 2026
+**Effective date:** April 28, 2026
 
 [Русская версия](privacy.html)
 
@@ -29,7 +29,7 @@ ToBeVPN ("we", "the app") is a VPN service for Android devices. This policy desc
 | Android device ID (`Settings.Secure.ANDROID_ID`) | Linking the subscription to a specific device | Bot backend |
 | Device name (`Build.MANUFACTURER` + `Build.MODEL`) | Display in your devices list | Bot backend |
 | Telegram ID | Authentication and subscription management | Bot backend and VPN panel |
-| Email (optional, if you provide it) | Account recovery, notifications | Bot backend and VPN panel |
+| Email (optional, if you provide it) | Account recovery, notifications | Locally in an encrypted database (SQLCipher), bot backend, and VPN panel |
 | Hardware ID (HWID) | Device tracking in the VPN panel | VPN panel |
 | OS version, device model, app version | HTTP headers when requesting subscription | VPN panel |
 | Inbound and outbound traffic in bytes | Plan quota calculation | Bot backend and VPN panel |
@@ -77,6 +77,8 @@ Data is shared only with the following processors required for the service:
 - **Telegram** (telegram.org) — for authentication confirmation.
 - **ToBeVPN server infrastructure** (bot, VPN panel, and VPN nodes) — for subscription delivery and VPN operation.
 - **Payment processors** (Telegram Stars, Cryptomus) — handled on the Telegram bot side; the app does not receive card or wallet data.
+- **Open Exchange Rates** (`open.er-api.com`) — public exchange-rate API used to show subscription prices in your local currency. Only your device's IP address is sent; no personal data.
+- **Maven Central** (`repo1.maven.org`) — public repository used as the endpoint for the internet speed test. Only your device's IP address is sent; no personal data.
 - **Google Play** — for app distribution and in‑app purchases (if applicable).
 
 We do not sell your data to advertisers and do not share it for marketing purposes.
