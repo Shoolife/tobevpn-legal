@@ -4,11 +4,11 @@ title: Privacy Policy — ToBeVPN
 
 # ToBeVPN Privacy Policy
 
-**Effective date:** April 28, 2026
+**Effective date:** April 30, 2026
 
 [Русская версия](privacy.html)
 
-ToBeVPN ("we", "the app") is a VPN service for Android devices. This policy describes what data we collect, why, and with whom we share it.
+ToBeVPN ("we", "the app") is a VPN service for Android devices. It is available as a phone/tablet client (`com.tobevpn.app`) and an Android TV client (`com.tobevpn.tv.app`). This policy applies to both clients and describes what data we collect, why, and with whom we share it.
 
 ## Data controller
 
@@ -34,7 +34,7 @@ ToBeVPN ("we", "the app") is a VPN service for Android devices. This policy desc
 | OS version, device model, app version | HTTP headers when requesting subscription | VPN panel |
 | Inbound and outbound traffic in bytes | Plan quota calculation | Bot backend and VPN panel |
 | Connection IP address | Briefly — for VPN technical operation | VPN panel and VPN nodes |
-| QR code image (mobile app only, on user request) | Linking a TV device via Google Code Scanner | On the device only, not sent to our servers |
+| QR code image (phone scans TV's QR, or TV renders a QR for the phone to scan) | Linking a TV device to your Telegram account | On the device only, not sent to our servers |
 
 ## 3. What we do NOT collect
 
@@ -57,7 +57,9 @@ ToBeVPN ("we", "the app") is a VPN service for Android devices. This policy desc
 
 The mobile version additionally uses the built-in **Google Code Scanner** module to link a TV device by scanning a QR code. The scanner runs locally; the app does not request `CAMERA` permission, and images are not stored or sent to our servers.
 
-The deep link `tobevpn://auth_callback` is used only to return to the app after a successful Telegram authentication.
+The Android TV version instead **renders a QR code locally** using the open-source ZXing library. The QR encodes a `https://t.me/<bot>?start=<auth_token>` URL that the user scans with their phone to complete Telegram sign-in. The TV app does not request `CAMERA` permission either; the image is generated and displayed entirely on the TV.
+
+The deep link `tobevpn://auth_callback` (mobile only) is used only to return to the app after a successful Telegram authentication.
 
 ## 3.2. VPN service declaration
 
