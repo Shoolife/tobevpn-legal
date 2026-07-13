@@ -4,6 +4,10 @@ title: ToBeVPN Legal
 
 # ToBeVPN
 
+**Operator:** Individual Entrepreneur Ivan Zaichenko, Republic of Kazakhstan
+
+**Оператор:** Индивидуальный предприниматель Иван Зайченко, Республика Казахстан
+
 ## Privacy Policy
 - [Privacy Policy (English)](privacy-en.html)
 - [Политика конфиденциальности (Русский)](privacy.html)

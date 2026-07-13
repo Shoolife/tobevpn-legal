@@ -6,7 +6,7 @@ title: Delete Account — ToBeVPN
 
 [Русская версия](delete-account.html)
 
-This page explains how to delete your ToBeVPN account and the data associated with it. The instructions apply to both clients — the phone/tablet app (`com.tobevpn.app`) and the Android TV app (`com.tobevpn.tv.app`).
+This page explains how to delete your ToBeVPN account and the data associated with it. The instructions apply to the phone/tablet and Android TV variants distributed under the `com.tobevpn.app` application identifier.
 
 ## Option 1. From the app
 
@@ -23,7 +23,7 @@ If you cannot use the app (for example, you lost access to the device), send an 
 - Your Telegram ID or username used at registration
 - The email linked to the account (if you provided one)
 
-We will process the request within **30 calendar days** and confirm deletion by email.
+We will respond to the request within **3 working days**. If the request includes withdrawal of consent to personal data processing, processing will stop within **15 working days**, unless storage or processing is required by the laws of the Republic of Kazakhstan or an obligation remains unfulfilled; otherwise, we will provide a reasoned refusal. We will confirm deletion by email.
 
 ## What is deleted
 
@@ -39,8 +39,10 @@ We will process the request within **30 calendar days** and confirm deletion by 
 In anonymized form, without the ability to link the data back to you personally:
 
 - Technical server logs (connection IP addresses, timestamps) — up to **90 days**, for incident investigation and debugging.
-- Financial and tax records of payments — for the period required by the operator's jurisdiction (typically up to **5 years**).
+- Financial and tax records of payments — for the period required by the laws of the Republic of Kazakhstan.
 
 ## Contact
+
+Operator: **Individual Entrepreneur Ivan Zaichenko, Republic of Kazakhstan**
 
 Email: [iv.zai4k@gmail.com](mailto:iv.zai4k@gmail.com)

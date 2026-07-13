@@ -4,16 +4,17 @@ title: Privacy Policy — ToBeVPN
 
 # ToBeVPN Privacy Policy
 
-**Effective date:** April 30, 2026
+**Effective date:** July 13, 2026
 
 [Русская версия](privacy.html)
 
-ToBeVPN ("we", "the app") is a VPN service for Android devices. It is available as a phone/tablet client (`com.tobevpn.app`) and an Android TV client (`com.tobevpn.tv.app`). This policy applies to both clients and describes what data we collect, why, and with whom we share it.
+ToBeVPN ("we", "the app") is a VPN service for Android devices. Phone/tablet and Android TV variants are distributed under the `com.tobevpn.app` application identifier. This policy applies to both variants and describes what data we collect, why, and with whom we share it.
 
-## Data controller
+## Personal data database owner and operator
 
-- **Controller:** Ivan Zaichenko (natural person)
-- **Jurisdiction:** Russian Federation
+- **Owner and operator:** Individual Entrepreneur Ivan Zaichenko
+- **Jurisdiction:** Republic of Kazakhstan
+- **Applicable law:** [Law of the Republic of Kazakhstan On Personal Data and their Protection](https://adilet.zan.kz/eng/docs/Z1300000094)
 - **Contact for personal data inquiries:** [iv.zai4k@gmail.com](mailto:iv.zai4k@gmail.com)
 
 ## 1. Principles
@@ -85,6 +86,8 @@ Data is shared only with the following processors required for the service:
 
 We do not sell your data to advertisers and do not share it for marketing purposes.
 
+Some processors and VPN nodes may be located outside the Republic of Kazakhstan. This may involve a cross-border transfer of the personal data necessary to provide the service, where the user has consented or another basis permitted by applicable law exists.
+
 ## 5. Storage and deletion
 
 Retention periods by data type:
@@ -94,11 +97,11 @@ Retention periods by data type:
 | Telegram ID, email, device name, HWID, device→account link | Until you delete the account or unlink the device |
 | Subscription traffic counters | For the subscription period + up to 12 months in anonymized form for statistics |
 | Server technical logs (IP, timestamps) | Up to 90 days |
-| Financial and tax records of payments | Up to 5 years (regulatory requirement) |
+| Financial and tax records of payments | For the period required by the laws of the Republic of Kazakhstan |
 
 The app's local database is encrypted (SQLCipher) and stays only on your device.
 
-**How to delete your account:** see the dedicated [Account deletion](delete-account-en.html) page. Email requests are processed within 30 days.
+**How to delete your account:** see the dedicated [Account deletion](delete-account-en.html) page. Request-processing periods are set out in section 8 below.
 
 Uninstalling the app clears local data but does not break the device→Telegram link on the server — use the deletion instructions for that.
 
@@ -127,7 +130,9 @@ You have the right to:
 - Receive your data in a machine-readable format (data portability)
 - Object to processing
 
-To exercise these rights, email the address below. We will respond within 30 days.
+To exercise these rights, email the address below. Information about stored personal data, or a reasoned response, will be provided within **3 working days** after receipt of the request. If consent is withdrawn, processing will stop within **15 working days**, unless storage or processing is required by the laws of the Republic of Kazakhstan or an obligation remains unfulfilled; otherwise, a reasoned refusal will be provided.
+
+Users may challenge actions or omissions relating to personal data processing before the competent authority of the Republic of Kazakhstan or a court. Where GDPR applies to a request, its requirements and time limits also apply.
 
 We **do not use** automated decision-making producing legal or similarly significant effects on the user, including profiling (Art. 22 GDPR).
 
