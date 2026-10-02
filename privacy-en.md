@@ -8,7 +8,7 @@ title: Privacy Policy — ToBeVPN
 
 [Русская версия](privacy.html)
 
-ToBeVPN ("we", "the app") is a VPN service for Android devices. Phone/tablet and Android TV variants are distributed under the `com.tobevpn.app` application identifier. This policy applies to both variants and describes what data we collect, why, and with whom we share it.
+ToBeVPN ("we", "the app") is a VPN service with apps for Android, Android TV and Windows. Phone/tablet and Android TV variants are distributed under the `com.tobevpn.app` application identifier; the Windows app is distributed through the Microsoft Store. This policy applies to all variants and describes what data we collect, why, and with whom we share it.
 
 ## Personal data database owner and operator
 
@@ -61,6 +61,17 @@ The mobile version additionally uses the built-in **Google Code Scanner** module
 The Android TV version instead **renders a QR code locally** using the open-source ZXing library. The QR encodes a `https://t.me/<bot>?start=<auth_token>` URL that the user scans with their phone to complete Telegram sign-in. The TV app does not request `CAMERA` permission either; the image is generated and displayed entirely on the TV.
 
 The deep link `tobevpn://auth_callback` (mobile only) is used only to return to the app after a successful Telegram authentication.
+
+## 3.1.1. Windows app
+
+The Windows app uses the built-in Windows VPN platform (`Windows.Networking.Vpn`, the `networkingVpnProvider` capability) and installs no network drivers or services. It sends the same kinds of data as listed above, with Windows equivalents:
+
+| Data | Purpose |
+| --- | --- |
+| Windows installation ID (`MachineGuid`) as the hardware ID (HWID) | Linking the subscription to the device |
+| Computer manufacturer and model, Windows version | Display in your devices list and HTTP headers when requesting subscription |
+
+The app registers only its own VPN profile ("ToBeVPN") and does not read or change VPN profiles of other apps. A connection starts only when you press the connect button.
 
 ## 3.2. VPN service declaration
 
